@@ -85,6 +85,23 @@ section {
     padding: 1.6rem;
     border-radius: 1rem;
 }
+
+footer {
+    background-color: var(--clr-card);
+    transition: var(--transition);
+    font: var(--ts-normal-semibold);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 19rem;
+    text-align: center;
+}
+
+a {
+    color: var(--clr-link);
+    transition: var(--transition);
+    text-decoration: none;
+}
 /**********************************/
 /* 2. Navbar
 /**********************************/
@@ -181,6 +198,18 @@ section {
     margin: 3rem 1.6rem;
 }
 
+@media screen and (min-width: 960px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1170px){
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 /**********************************/
 /* 5. State Select
 /**********************************/
@@ -262,6 +291,20 @@ section {
 .state-select-list__item--hide {
     display: none;
 }
+
+@media screen and (min-width: 960px){
+    .state-select {
+        grid-column: 1 / -1;
+    }
+}
+
+@media screen and (min-width: 117px){
+    .state-select {
+        grid-column: 1 ;
+    }
+}
+
+
 /**********************************/
 /* 6. Status
 /**********************************/
@@ -301,9 +344,42 @@ section {
     color: var(--clr-vaccinated-2);
     transition: var(--transition);
 }
+
+@media screen and (min-width: 1170px){
+    .status:nth-of-type(1) {
+        grid-column: 1;
+    }
+}
 /**********************************/
 /* 7. Data Box
 /**********************************/
+
+.data-box__header {
+    font: var(--ts-caption);
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+}
+
+.data-box__description {
+    font: var(--ts-normal-text);
+}
+
+@media screen and (min-width: 960px){
+    .data-box--30 {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width: 1170px){
+    .data-box--30 {
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+
+    .data-box--deaths, .data-box--confirmed, .data-box--vaccinated-abs, .data-box--vaccinated-day {
+        grid-column: span 2;
+    }
+}
 
 
 
@@ -311,3 +387,6 @@ section {
 /* 8. Footer
 /**********************************/
 
+.footer-text__source {
+    margin-bottom: 3.2rem;
+}

@@ -23,13 +23,19 @@ const _data = {
 }
 
 const _charts = {};
-
+// DARK AND LIGHT
 _elements.switch.addEventListener("click", () => {
+    const isDark = _elements.switch.classList.toggle("switch__track--dark");
 
+    if(isDark)
+        document.documentElement.setAttribute("data-theme", "dark")
+    else
+        document.documentElement.setAttribute("data-theme", "light")
 });
-
+// MENU ESTADOS 
 _elements.stateSelectToggle.addEventListener("click", () => {
-
+    _elements.selectToggleIcon.classList.toggle("state-select-toggle__icon--rotate")
+    _elements.selectList.classList.toggle("state-select-list--show")
 });
 
 _elements.selectOptions.forEach(item => {
