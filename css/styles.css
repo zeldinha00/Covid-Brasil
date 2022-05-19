@@ -298,7 +298,7 @@ a {
     }
 }
 
-@media screen and (min-width: 117px){
+@media screen and (min-width: 1170px){
     .state-select {
         grid-column: 1 ;
     }
