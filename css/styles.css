@@ -126,6 +126,7 @@ a {
     font-size: 1.8rem;
     display: flex;
     align-items: center;
+    
 }
 
 .switch__track {
@@ -153,6 +154,7 @@ a {
 .switch__track--dark::before {
     left: 2rem;
 }
+
 
 /**********************************/
 /* 3. Loading
